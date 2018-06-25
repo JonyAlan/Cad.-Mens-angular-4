@@ -10,11 +10,13 @@ import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { BookComponent } from './book/book.component';
 
+
 import{BooksService} from './book/book-service/books.service';
 import{PagerService} from './book/book-service/pager.service';
 import { EditbookComponent } from './book/editbook/editbook.component';
 import { AddbookComponent } from './book/addbook/addbook.component';
 import { OrderByPipe } from './order-by.pipe';
+import { ManobristaComponent } from './manobrista/manobrista.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { OrderByPipe } from './order-by.pipe';
     BookComponent,
     EditbookComponent,
     AddbookComponent,
-    OrderByPipe
+    OrderByPipe,
+    ManobristaComponent
         
   ],
   imports: [

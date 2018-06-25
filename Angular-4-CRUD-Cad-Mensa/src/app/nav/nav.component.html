@@ -2,12 +2,24 @@
 
 <ul class="nav justify-content-center nav-tabs">
         <li class="nav-item">
-          <a class="nav-link active" routerLink="/home" routerLinkActive="active">Início</a>
+          <a class="nav-link active" routerLink="/home" routerLinkActive="active">Rotativo</a>
         </li>
+          
         <li class="nav-item">
-          <a class="nav-link" routerLink="/books" routerLinkActive="active">Atendente</a>
+          <a class="nav-link" routerLink="/books" routerLinkActive="active">Mensalistas</a>
         </li>  
+        
         <li class="nav-item">
-          <a class="nav-link" routerLink="/books" routerLinkActive="active">Manobrista</a>
-        </li>      
+          <a class="nav-link" routerLink="/manobrista" routerLinkActive="active">Manobrista</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="app-manobrista" routerLink="index" routerLinkActive="active">Sair</a>
+        </li>
+ 
+<section>
+    <article ng-view></article>
+</section>
+
+
       </ul>

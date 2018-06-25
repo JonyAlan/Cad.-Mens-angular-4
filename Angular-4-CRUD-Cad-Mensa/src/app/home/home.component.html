@@ -1,45 +1,82 @@
-
-
-
-
-<h2>
-  Login
-</h2>
-
-<div class="row">
-        <div class="input-field col s12">
-          <input id="usuario" type="text" class="validate">
-          <label class="active" for="usuario">Usuário</label>
-        </div>
-      </div>
-
-<div>
-<div class="row">
-        <div class="input-field col s12">
-          <input id="senha" type="password" class="validate">
-          <label class="active" for="senha">Senha</label>
-        </div>
-      </div>
-
-<div>
-
-  <button class="btn waves-effect waves-light" 
-    type="submit" name="action"(click)="fazerLogin()">Login
-    <i class="material-icons right">send</i>
-  </button>
-
-  </div>
-
-  <p>
-     {{mensagem}}
-  </p>
-
-<div class="page-header text-center">
+<div class="container">
   
-  
-  <h1>{{title}}</h1>
-    <h1>{{subtitle}}</h1>
+    <div class="panel "> <h2>Entrada de veiculos</h2></div>
+    <form >
+        
+      
+
+        <div class="form-group row">
+          <label for="placa" class="col-sm-2 col-form-label">Placa:</label>
+            <div class="col-sm-2">
+              <input id="placa" type="text" class="form-control"
+                              name="placa"
+                              [(ngModel)]="placa.placa" />
+                             
+             </div>
+        </div>                              
+        <div class="form-group row">
+          <label for="marca" class="col-sm-2 col-form-label">Marca:</label>
+            <div class="col-sm-2">                              
+             <input type="text" id="marca" class="form-control"
+                              name="marca"
+                              [(ngModel)]="placa.marca" />
+                             
+            </div>
+        </div>  
+          
+        <div class="form-group row">
+          <label for="hora" class="col-sm-2 col-form-label">Hóra:</label>
+            <div class="col-sm-2">                              
+             <input type="text" id="hora" class="form-control"
+                              name="hora"
+                              [(ngModel)]="placa.hora" />
+                
+            </div>
+        </div>
+                                                                               
+
+     
+        <button type="button"
+                     class="btn btn-primary"
+                     (click)="add()">Adicionar</button>
+        <button type="button"
+                     class="btn btn-warning"
+                     (click)="Add()">Cancel</button>
+    
+
+         <h1> </h1>
+    <h1> Pátio </h1>
+    
+      <table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th class="text-center" >Placa</th>
+        <th class="text-center">Marca</th>
+        <th class="text-center">Hora</th>
+        <th class="text-center">Pagar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of placas">
+        <td>{{item.placa}}</td>
+        <td>{{item.marca}}</td>
+        <td>{{item.hora}}</td>
+      
+      <div class="btn-group" role="group">
+        
+          <a class=" btn btn-danger" (click)="pagEfetiv"><span class="glyphicon glyphicon-remove-sign"></span></a>
+         </div>
+</tr>
+    </tbody>
+  </table>
+
+
+     
+
+     </form>
 
 
 
-  </div>
+
+
+ 

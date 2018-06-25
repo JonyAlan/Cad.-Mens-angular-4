@@ -5,6 +5,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import{HomeComponent} from './home/home.component';
+import{ManobristaComponent} from './manobrista/manobrista.component';
 import{BookComponent} from './book/book.component';
 import{EditbookComponent} from './book/editbook/editbook.component';
 import{AddbookComponent} from './book/addbook/addbook.component';
@@ -14,6 +15,7 @@ import{AddbookComponent} from './book/addbook/addbook.component';
     RouterModule.forRoot([
          { path: '', component: HomeComponent },
          { path: 'home', component: HomeComponent },
+         { path: 'manobrista', component: ManobristaComponent },
          { path: 'books', component: BookComponent },
          { path: 'books/new', component: AddbookComponent },
          { path: 'books/edit/:id', component: EditbookComponent }
